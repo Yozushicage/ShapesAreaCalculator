@@ -1,4 +1,4 @@
-## 1. Пример использования библиотеки
+## 1. РџСЂРёРјРµСЂ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёСЏ Р±РёР±Р»РёРѕС‚РµРєРё
 ```js
 var circle = ShapesFactory.CreateCircle(10);
 var circleArea = circle.Area;
@@ -8,4 +8,4 @@ var triangleArea = triangle?.Area;
 var isRightAngled = triangle?.IsRightAngled;
 ```
 
-## 2. Запрос расположен в файле [Query.sql](https://github.com/Yozushicage/ShapesAreaCalculator/blob/main/Query.sql)
+## 2. Р—Р°РїСЂРѕСЃ СЂР°СЃРїРѕР»РѕР¶РµРЅ РІ С„Р°Р№Р»Рµ [Query.sql](https://github.com/Yozushicage/ShapesAreaCalculator/blob/main/Query.sql)
