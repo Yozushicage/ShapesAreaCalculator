@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33815.320
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{B42B6110-9C8A-494A-880E-957913781181}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{D7FF67F5-0735-4E0E-AF43-738916322676}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeometricShapesLibrary", "GeometricShapesLibrary\GeometricShapesLibrary.csproj", "{4C2876EE-8616-4459-A998-DE91F9578469}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeometricShapesLibrary.Tests", "GeometricShapesLibrary.Tests\GeometricShapesLibrary.Tests.csproj", "{3AFC48F2-B163-4897-91F2-C46B474E2CF7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{256727C9-7D1A-4D30-86FB-5A57C218C306}"
+	ProjectSection(SolutionItems) = preProject
+		Query.sql = Query.sql
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4C2876EE-8616-4459-A998-DE91F9578469}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C2876EE-8616-4459-A998-DE91F9578469}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C2876EE-8616-4459-A998-DE91F9578469}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C2876EE-8616-4459-A998-DE91F9578469}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3AFC48F2-B163-4897-91F2-C46B474E2CF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AFC48F2-B163-4897-91F2-C46B474E2CF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AFC48F2-B163-4897-91F2-C46B474E2CF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AFC48F2-B163-4897-91F2-C46B474E2CF7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4C2876EE-8616-4459-A998-DE91F9578469} = {B42B6110-9C8A-494A-880E-957913781181}
+		{3AFC48F2-B163-4897-91F2-C46B474E2CF7} = {D7FF67F5-0735-4E0E-AF43-738916322676}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B5B15500-A5B4-4FEA-852D-94361908E431}
+	EndGlobalSection
+EndGlobal

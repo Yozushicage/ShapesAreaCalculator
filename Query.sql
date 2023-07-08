@@ -1,0 +1,55 @@
+CREATE TABLE Products(
+	Id binary(16) NOT NULL,
+	Name nvarchar(150) NOT NULL,
+  	CONSTRAINT PK_Products_Id PRIMARY KEY (Id)
+);
+
+INSERT INTO Products
+VALUES 
+(0x011BC8696A62D745AD1931E338A1D210, 'Power adapter Xilence'),
+(0x03A7F59F1C58AA45BA8156E7271564DD, 'Power adapter Raveda'),
+(0x03131425B38D4A5887A2B7706397BC2F, 'TV Rolsen'),
+(0x1A0A5EC80F8B7E4192BF75D3A10C2566, 'Laptop Apple'),
+(0x070DB365C8B1EC4394A05207CB1DFA00, 'Laptop gaming Lenovo'),
+(0x08976180E2CDB24BA0D3520A4FE15BB3, 'Headphones Beats');
+
+CREATE TABLE Categories(
+	Id binary(16) NOT NULL,
+	Name nvarchar(150) NOT NULL,
+  	CONSTRAINT PK_Categories_Id PRIMARY KEY (Id)
+);
+
+INSERT INTO Categories
+VALUES 
+(0x06195717BD604945B13C0E38D7432065, 'Power adapters'),
+(0x062AFE7E9BEB47AD86A7FD30283C9B05, 'TVs'),
+(0x063CFD6BAB18474C83BF46193DCA5383, 'Laptops'),
+(0x063388D683AAB940B2D55892ECD81063, 'Ultrabooks');
+
+CREATE TABLE ProductCategory
+(
+    ProductId binary(16) NOT NULL,
+    CategoryId binary(16) NOT NULL,
+
+    constraint PK_ProductCategory_ProductId_CategoryId primary key (ProductId, CategoryId),
+    constraint FK_ProductCategory_ProductId foreign key (ProductId) references Products (Id),
+    constraint FK_ProductCategory_CategoryId foreign key (CategoryId) references Categories (Id)
+);
+
+INSERT INTO ProductCategory
+VALUES 
+(0x011BC8696A62D745AD1931E338A1D210, 0x06195717BD604945B13C0E38D7432065), 
+(0x03A7F59F1C58AA45BA8156E7271564DD, 0x06195717BD604945B13C0E38D7432065), 
+(0x03131425B38D4A5887A2B7706397BC2F, 0x062AFE7E9BEB47AD86A7FD30283C9B05), 
+(0x1A0A5EC80F8B7E4192BF75D3A10C2566, 0x063CFD6BAB18474C83BF46193DCA5383), 
+(0x1A0A5EC80F8B7E4192BF75D3A10C2566, 0x063388D683AAB940B2D55892ECD81063),
+(0x070DB365C8B1EC4394A05207CB1DFA00, 0x063CFD6BAB18474C83BF46193DCA5383);
+
+SELECT 
+	Products.Name AS ProductName, 
+	ISNULL(Categories.Name, 'Category not set') AS CategoryName
+FROM Products AS Products
+    LEFT JOIN ProductCategory AS ProductCategory 
+    	on Products.Id = ProductCategory.ProductId
+    LEFT JOIN Categories AS Categories
+    	on Categories.Id = ProductCategory.CategoryId;
